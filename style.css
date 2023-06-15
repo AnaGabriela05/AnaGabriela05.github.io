@@ -537,6 +537,7 @@ hr {
 }
 #contacto .contenedor-foto-1 {
   width: 100%;
+  display: block;
 }
 
 #contacto .contenedor-foto-1 img {
@@ -721,6 +722,9 @@ footer a {
   }
   .contenedor-foto-1 {
     display: none;
+  }
+  .contenedor-foto-1 img{
+    width:0px;
   }
   #contacto .contenedor-form .mitad {
     margin-bottom: 15px;
