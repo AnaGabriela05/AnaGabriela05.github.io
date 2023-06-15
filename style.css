@@ -185,7 +185,7 @@ html {
   text-transform: uppercase;
   color: #111135;
   text-decoration: underline;
-  text-decoration-color:#868484;
+  text-decoration-color: #868484;
   text-decoration-thickness: 4px;
 }
 
@@ -253,7 +253,7 @@ hr {
 #servicios {
   padding: 100px 15px;
   text-align: center;
-  background-color: #fff;;
+  background-color: #fff;
 }
 
 #servicios .titulo-seccion {
@@ -278,13 +278,14 @@ hr {
   background-color: #fff;
   border: 1px solid #000000;
   padding: 30px;
-  margin: 0 5px;
+  margin: 0px 5px;
   border-radius: 5px;
   transition: 0.5s;
+  box-shadow: 5px 5px 10px #a79fa9e4, -5px -5px 10px #a397a5e4;
 }
 
 #servicios .fila .servicio:hover {
-  box-shadow: 5px 5px 10px #a79fa9e4, -5px -5px 10px #a397a5e4;
+  box-shadow: 5px 5px 10px #8f6799e4, -5px -5px 10px #845a8be4;
 }
 
 #servicios .fila .servicio .icono {
@@ -437,7 +438,6 @@ hr {
     rgba(127, 106, 145, 0.56),
     rgba(157, 150, 150, 0.7)
   );
-  
 }
 
 #portfolio .titulo-seccion {
@@ -452,10 +452,9 @@ hr {
 #portfolio .fila {
   display: flex;
   justify-content: space-between;
-  margin: 40px 0 ;
+  margin: 40px 0;
   margin-left: 5%;
   margin-right: 5%;
-
 }
 
 #portfolio .fila .proyecto {
@@ -531,17 +530,30 @@ hr {
 /* *********************/
 
 #contacto {
-  padding: 100px 15px;
-  background-color: #f3f3f3;
+  padding: 0px 15px 30px;
+  background-color: #ffffff;
+  width: 100%;
+  display: flex;
+}
+#contacto .contenedor-foto-1 {
+  width: 100%;
 }
 
+#contacto .contenedor-foto-1 img {
+  width: 100%;
+  border-radius: 20px;
+  background-color: #ffffff;
+}
 #contacto .titulo-seccion {
   margin-bottom: 20px;
+  font-size: 25px;
 }
 
 #contacto .contenedor-form {
-  max-width: 1100px;
-  margin: auto;
+  width: 100%;
+  position: relative;
+  margin-left: 10%;
+  margin-right: 10%;
 }
 
 #contacto .contenedor-form .fila {
@@ -556,13 +568,29 @@ hr {
 #contacto .contenedor-form input,
 #contacto .contenedor-form textarea {
   padding: 20px;
-  border-radius: 20px;
   border: none;
-  border: 1px solid #919191;
+  border: 1px solid #ced4da;
+  border-radius: 10px;
+  transition: border-color 0.15s;
+  /* width: 60%;
+  padding: 20px;
+  border: none;
+  border: 1px solid #ced4da;
+  border-radius: 10px;
+  transition: border-color 0.15s; */
 }
-
+#contacto .contenedor-form .fila input,
 #contacto .contenedor-form .mitad input {
-  width: 48%;
+  width: 100%;
+  height: calc(1.5em + 0.75rem + 3px);
+  padding: 0.375rem 0.75rem;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  background-color: #fff;
+  border: 1px solid #ced4da;
+  border-radius: 10px;
+  transition: border-color 0.15s;
 }
 
 #contacto .contenedor-form .input-full {
@@ -574,22 +602,22 @@ hr {
   font-size: 22px;
   text-transform: uppercase;
   color: #111135;
-  text-decoration: underline;
+  /* text-decoration: underline;
   text-decoration-color: #d3d3d3;
-  text-decoration-thickness: 5px;
+  text-decoration-thickness: 5px; */
 }
 
 #contacto .btn-enviar {
-  display: block;
   margin: auto;
   cursor: pointer;
   transition: 0.5s;
   padding: 10px 15px !important;
+  background-color: #ae74c1;
+  color: #ffffff;
 }
 
 #contacto .btn-enviar:hover {
-  background-color: #ff5080;
-  color: #fff;
+  color: #000000;
 }
 /* *********************/
 /* seccion F O O T E R */
@@ -597,6 +625,7 @@ hr {
 
 footer {
   background-color: #000;
+  background: linear-gradient(rgba(34, 34, 34, 0.56), rgba(0, 0, 0, 0.7));
   color: #fff;
   text-align: center;
   padding: 30px 0;
@@ -652,10 +681,11 @@ footer a {
     margin: auto;
   }
   #sobremi .contenedor-foto img {
-    padding: 8px;
+    padding: 3px;
   }
   #sobremi .sobremi .titulo-seccion {
     text-align: center;
+    padding: 50px;
   }
   #sobremi .sobremi h2 {
     font-size: 25px;
@@ -688,6 +718,9 @@ footer a {
   /* seccion CONTACTO */
   #contacto {
     padding: 50px 15px;
+  }
+  .contenedor-foto-1 {
+    display: none;
   }
   #contacto .contenedor-form .mitad {
     margin-bottom: 15px;
