@@ -572,6 +572,7 @@ hr {
   border: 1px solid #ced4da;
   border-radius: 10px;
   transition: border-color 0.15s;
+  width: 100%;
   /* width: 60%;
   padding: 20px;
   border: none;
@@ -611,7 +612,7 @@ hr {
   margin: auto;
   cursor: pointer;
   transition: 0.5s;
-  padding: 10px 15px !important;
+  padding: 15px 15px !important;
   background-color: #ae74c1;
   color: #ffffff;
 }
