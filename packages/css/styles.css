@@ -389,9 +389,23 @@ img {
   align-items: center;
   justify-content: center;
   position: relative;
-  z-index: 99;
+  
 }
-
+#inicio .contenido .bienvenida {
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+}
+#inicio .contenido .presentacion h2 {
+  margin-bottom: 25px;
+  text-align: center;
+}
+#inicio .contenido .descripcion {
+  max-width: 700px;
+  margin: 25px auto;
+  font-size: 18px;
+  text-align: center;
+}
 
 /*==================== BUTTONS ====================*/
 
@@ -446,7 +460,6 @@ img {
 
 /*==================== ABOUT ====================*/
 #about{
- 
   background-color: var(--body-color);
 }
 .about__img {
