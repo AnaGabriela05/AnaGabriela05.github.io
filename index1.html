@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0 user-scalable=no">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
+    <link rel="icon" href="Ico.ico" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js"></script>
+    <title>Gabriela</title>
+  </head>
+  <body>
+    <div id="particles-js"></div>
+    <!-- SECCION I N I C I O -->
+    <section id="inicio">
+    <!-- <div id="particles-js"></div>-->
+      <div class="contenido">
+        <header>
+          <div class="contenido-header">
+            <h1><img src="/IMG/Ico.jpeg" height="30" /></h1>
+            <nav id="nav" class="">
+              <ul id="links">
+                <li>
+                  <a href="#inicio" class="seleccionado" onclick="seleccionar(this)">INICIO</a>
+                </li>
+                <li>
+                  <a href="#sobremi" onclick="seleccionar(this)">SOBRE MI</a>
+                </li>
+                <li>
+                  <a href="#servicios" onclick="seleccionar(this)">SERVICIOS</a>
+                </li>
+                <li>
+                  <a href="#portfolio" onclick="seleccionar(this)">PORTFOLIO</a>
+                </li>
+                <li>
+                  <a href="#contacto" onclick="seleccionar(this)">CONTACTO</a>
+                </li>
+              </ul>
+            </nav>
+            <!-- Icono del menu responsive -->
+            <div id="icono-nav" onclick="responsiveMenu()">
+              <i class="fa-solid fa-bars"></i>
+            </div>
+            <div class="redes">
+              <!--<a
+                href="https://www.linkedin.com/in/ana-vilchez-dev/"
+                target="_blank"
+              >
+                <i class="fa-brands fa-linkedin"></i>
+              </a>-->
+            </div>
+          </div>
+        </header>
+        <div class="presentacion">
+          <p class="bienvenida">Bienvenidos</p>
+          <h2>
+            Soy Ana Vilchez , <span id="typewriter"></span
+            ><span id="cursor">|</span>
+          </h2>
+          <script>
+            function sleep(ms) {
+              return new Promise((resolve) => setTimeout(resolve, ms));
+            }
+            const phrases = ["Desarrollador", "Soporte TI", "Analista"];
+            const el = document.getElementById("typewriter");
+
+            let sleepTime = 100;
+
+            let curPhraseIndex = 0;
+
+            const writeLoop = async () => {
+              while (true) {
+                let curWord = phrases[curPhraseIndex];
+
+                for (let i = 0; i < curWord.length; i++) {
+                  el.innerText = curWord.substring(0, i + 1);
+                  await sleep(sleepTime);
+                }
+
+                await sleep(sleepTime * 10);
+
+                for (let i = curWord.length; i > 0; i--) {
+                  el.innerText = curWord.substring(0, i - 1);
+                  await sleep(sleepTime);
+                }
+
+                await sleep(sleepTime * 5);
+
+                if (curPhraseIndex === phrases.length - 1) {
+                  curPhraseIndex = 0;
+                } else {
+                  curPhraseIndex++;
+                }
+              }
+            };
+            writeLoop();
+          </script>
+          <p class="descripcion">
+            ¡Únete a mi viaje tecnológico y déjate sorprender por la magia de la
+            programación!
+          </p>
+          <a href="#portfolio">Ir a Portafolio</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECCION S O B R E M I -->
+    <section id="sobremi">
+        <div class="contenedor-foto">
+          <img src="/IMG/photo.jpg" alt="" />
+        </div>
+        <div class="sobremi">
+          <p class="titulo-seccion">Sobre Mi</p>
+          <h2>Hola, Soy <span>Ana Vilchez</span></h2>
+          <h3>Desarrollador / Analista</h3>
+          <p>
+            Profesional con experiencia en el área de desarrollo de software,
+            implementando metodologías ágiles, ofreciendo soluciones de
+            transformación digital en el sector médico.
+          </p>
+          <p>
+            Dedicando mi tiempo en aprender y aplicar técnicas de optimización,
+            creación en modelos de base de datos, desarrollo Web y Android.
+          </p>
+          <a download="GABRIELA_V_CV" href="/IMG/GABRIELA_V_CV.pdf"
+            >Descargar CV</a
+          >
+        </div>
+      <!--<hr />-->
+    </section>
+    <!-- SECCION H A B I L I D A D E S -->
+    <div class="contenedor-skills" id="skills">
+      <h3>HABILIDADES</h3>
+      <div class="skill">
+        <div class="info">
+          <p><span class="lista"> </span>Html & Css</p>
+          <span class="porcentaje">95%</span>
+        </div>
+
+        <div class="barra">
+          <div class="" id="html"></div>
+        </div>
+      </div>
+      <div class="skill">
+        <div class="info">
+          <p><span class="lista"> </span>Figma</p>
+          <span class="porcentaje">90%</span>
+        </div>
+
+        <div class="barra">
+          <div class="" id="js"></div>
+        </div>
+      </div>
+      <div class="skill">
+        <div class="info">
+          <p><span class="lista"> </span>Bases de Datos</p>
+          <span class="porcentaje">90%</span>
+        </div>
+
+        <div class="barra">
+          <div class="" id="bd"></div>
+        </div>
+      </div>
+      <div class="skill">
+        <div class="info">
+          <p><span class="lista"> </span>.Net Framework</p>
+          <span class="porcentaje">85%</span>
+        </div>
+        <div class="barra">
+          <div class="" id="ps"></div>
+        </div>
+      </div>
+    </div>
+    <!-- SECCION PORTAFOLIO -->
+    <section id="portfolio">
+      <h3 class="titulo-seccion">Mis Proyectos</h3>
+      <div class="fila">
+        
+        <div class="proyecto">
+          <img src="/IMG/dianus.PNG" alt="alt" loading="lazy" />
+          <div class="info">
+            <h4>Descripcion Proyecto</h4>
+            <a class="card-circle-span" target="_black" href="https://github.com/AnaGabriela05/Pagina.git">
+              <i class="fas fa-link" aria-hidden="true"></i></a>
+          </div>
+        </div>
+        <div class="proyecto">
+          <img src="/IMG/home.png" alt="alt" loading="lazy" />
+          <div class="info">
+            <h4>PADAMA HOTEL</h4>
+            <br />
+            <a
+              class="card-circle-span"
+              target="_black"
+              href="https://github.com/AnaGabriela05/HotelFinal.git"
+            >
+              <i class="fas fa-link" aria-hidden="true"></i
+            ></a>
+          </div>
+        </div>
+        <div class="proyecto">
+          <img src="/IMG/back.png" alt="alt" loading="lazy" />
+          <div class="info">
+            <h4>Descripcion Proyecto</h4>
+            <a class="card-circle-span" target="_black" href="https://github.com/AnaGabriela05/projectServici.git">
+              <i class="fas fa-link" aria-hidden="true"></i></a>
+          </div>
+        </div>
+        
+      </div>
+    </section>
+
+    <!-- SECCION S E R V I C I O S -->
+    <section id="servicios">
+      <h3 class="titulo-seccion">MIS SERVICIOS</h3>
+      <div class="fila">
+        <div class="servicio">
+          <span class="icono"> <i class="fa-solid fa-code"></i></span>
+          <h4>Diseño de Sitios Web</h4>
+          <hr />
+          <p>Sitios web atractivos y funcionales con una experiencia agradable y eficiente
+          </p>
+        </div>
+        <div class="servicio">
+          <span class="icono"><i class="fa-solid fa-file-code"></i></span>
+          <h4>Desarrollo Backend</h4>
+          <hr />
+          <p>MVC .Net Framework, Java, Python </p>
+            <p> API REST Spring Boot, .Net Core
+          </p>
+        </div>
+        <div class="servicio">
+          <span class="icono"><i class="fa-solid fa-arrow-trend-up"></i></span>
+          <h4>Desarrollo Base de Datos</h4>
+          <hr />
+          <p>
+           Sql Server, MySql
+          </p>
+          <!--<p>Contribuir al rendimiento, escalabilidad y confiabilidad 
+             del sistema.</p>-->
+        </div>
+      </div>
+      <div class="fila">
+        <div class="servicio">
+          <span class="icono"> <i class="fa-solid fa-code"></i></span>
+          <h4>Soporte de Proyectos</h4>
+          <hr />
+          <p>Soluciones y automatizacion de codigo.
+          </p>
+          <p>Garantizar el éxito en la implementación y desarrollo de proyectos.</p>
+        </div>
+        <div class="servicio">
+          <span class="icono"><i class="fa-solid fa-file-code"></i></span>
+          <h4>Soporte TI</h4>
+          <hr />
+          <p>
+            asistencia técnica y soluciones de problemas.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECCTION C O N T A C T O -->
+    <section id="contacto">
+      <div class="contenedor-form">
+        
+      <h3 class="titulo-seccion">Contacto</h3>
+        <form action="mailto:anavilchez.job@gmail.com" method="post">
+          <div class="fila">
+            <input
+              type="text"
+              placeholder="Nombre Completo *"
+              class="input-mitad"/>
+          </div>
+          <div class="fila">
+            <input
+              type="email"
+              placeholder="Dirección de Email"
+              class="input-mitad"/>
+          </div>
+          <div class="fila">
+            <input type="text" placeholder="Tema..." class="input-full" />
+          </div>
+          <div class="fila">
+            <textarea
+              name=""
+              id=""
+              cols="30"
+              rows="10"
+              placeholder="Tu Mensaje..."
+              class="input-full"
+            ></textarea>
+          </div>
+          <input type="submit" value="Enviar Mensaje" class="btn-enviar"/>
+        </form>
+      </div>
+      <div class="contenedor-foto-1">
+        <img src="/IMG/Code typing-bro.png" alt="" />
+      </div>
+    </section>
+    <!-- SECCION FOOTER -->
+    <footer>
+      <div class="co-text">
+        <a href="https://www.linkedin.com/in/ana-vilchez-dev/" target="_blank">
+          <i class="fa-brands fa-linkedin"></i>
+        </a>
+        <a href="https://github.com/AnaGabriela05" target="_blank">
+          <i class="fa-brands fa-github"></i>
+        </a>
+        <br />
+        Copyright &copy;
+        <script>
+          document.write(new Date().getFullYear());
+        </script>
+        <br />
+        Todos los derechos reservados
+        <i class="fa fa-heart" aria-hidden="true"></i>
+      </div>
+    </footer>
+
+    <!--<script src="/SCRIPT/Script.js"></script>-->
+    <script src="/SCRIPT/particles.min.js"></script>
+    <script src="/SCRIPT/homeTyped.js"></script>
+    <script src="/SCRIPT/typed.js"></script>
+    <script src="/SCRIPT/app.js"></script>
+  </body>
+</html>
